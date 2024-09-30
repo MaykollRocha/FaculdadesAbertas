@@ -43,3 +43,4 @@ st.markdown(r"""
 
 entra = st.number_input("Entra numero")
 st.write(entra)
+color  = st.color_picker('Pick a color')
