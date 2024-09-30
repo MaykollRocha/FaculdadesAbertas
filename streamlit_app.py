@@ -15,7 +15,7 @@ def simples_plot(title,data,rotulo):
 st.set_page_config(page_title="Maykoll Rocha - Portifolio Pessoal",
             page_icon=None ,
             layout="wide",
-            initial_sidebar_state="expanded",
+            initial_sidebar_state="collapsed",
         )
 
 st.write("Hello Word")
@@ -49,4 +49,6 @@ st.write(color)
 data = st.date_input("Entre com o dia")
 st.write(data)
 
-st.sidebar.button("Side Buton")
+with st.sidebar:
+    st.button("Side Buton")
+st.write("saiu")
