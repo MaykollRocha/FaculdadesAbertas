@@ -1,6 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 import requests
 
 def simples_plot(title,data,rotulo):
@@ -35,3 +36,5 @@ data = np.loadtxt(data_response.text.splitlines())
 rotulo = np.loadtxt(rotulo_response.text.splitlines())
 
 st.pyplot(simples_plot("Base de Dados Tratada",data,rotulo))
+my_dataframe = pd.read_csv("/Funcionarios.csv") 
+st.dataframe(my_dataframe)
