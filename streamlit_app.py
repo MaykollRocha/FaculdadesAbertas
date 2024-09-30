@@ -7,3 +7,4 @@ st.set_page_config(page_title="Maykoll Rocha - Portifolio Pessoal",
         )
 
 st.write("Hello Word")
+st.text("Hello Word")
