@@ -48,3 +48,6 @@ st.write(color)
 
 data = st.date_input("Entre com o dia")
 st.write(data)
+
+with st.sidebar:
+    st.button("Side Buton")
