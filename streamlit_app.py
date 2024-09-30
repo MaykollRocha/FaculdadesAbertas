@@ -17,6 +17,7 @@ st.set_page_config(page_title="Maykoll Rocha - Portifolio Pessoal",
             layout="wide",
             initial_sidebar_state="collapsed",
         )
+    
 def main():
     st.write("Hello Word")
     st.text("Hello Word")
@@ -25,7 +26,15 @@ def main():
                 $$ P(n, k) = \frac{1}{k!} \sum_{j=1}^{k} (-1)^{k-j} \binom{k}{j} j^n $$  
                 maykoll 
                 rocha
-                """)
+                """)    
+
+    entra = st.number_input("Entra numero")
+    st.write(entra)
+    color  = st.color_picker('Pick a color',)
+    st.write(color)
+
+    data = st.date_input("Entre com o dia")
+    st.write(data)
 def plot():
         
     # Baixa os dados dos arquivos
@@ -40,13 +49,6 @@ def plot():
     
 
 
-entra = st.number_input("Entra numero")
-st.write(entra)
-color  = st.color_picker('Pick a color',)
-st.write(color)
-
-data = st.date_input("Entre com o dia")
-st.write(data)
 
 
 
