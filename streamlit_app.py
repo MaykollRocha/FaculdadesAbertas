@@ -17,28 +17,27 @@ st.set_page_config(page_title="Maykoll Rocha - Portifolio Pessoal",
             layout="wide",
             initial_sidebar_state="collapsed",
         )
+def main():
+    st.write("Hello Word")
+    st.text("Hello Word")
+    st.latex(r"P(n, k) = \frac{1}{k!} \sum_{j=1}^{k} (-1)^{k-j} \binom{k}{j} j^n ")
+    st.markdown(r"""
+                $$ P(n, k) = \frac{1}{k!} \sum_{j=1}^{k} (-1)^{k-j} \binom{k}{j} j^n $$  
+                maykoll 
+                rocha
+                """)
+def plot():
+        
+    # Baixa os dados dos arquivos
+    data_response = requests.get('https://raw.githubusercontent.com/MaykollRocha/Data_Sets/main/data.txt')
+    rotulo_response = requests.get('https://raw.githubusercontent.com/MaykollRocha/Data_Sets/main/rotulos.txt')
 
-st.write("Hello Word")
-st.text("Hello Word")
-st.latex(r"P(n, k) = \frac{1}{k!} \sum_{j=1}^{k} (-1)^{k-j} \binom{k}{j} j^n ")
-st.markdown(r"""
-            $$ P(n, k) = \frac{1}{k!} \sum_{j=1}^{k} (-1)^{k-j} \binom{k}{j} j^n $$  
-            maykoll 
-            rocha
-            """)
+    # Carrega os dados no NumPy
+    data = np.loadtxt(data_response.text.splitlines())
+    rotulo = np.loadtxt(rotulo_response.text.splitlines())
 
-# Baixa os dados dos arquivos
-#data_response = requests.get('https://raw.githubusercontent.com/MaykollRocha/Data_Sets/main/data.txt')
-#rotulo_response = requests.get('https://raw.githubusercontent.com/MaykollRocha/Data_Sets/main/rotulos.txt')
-
-# Carrega os dados no NumPy
-#data = np.loadtxt(data_response.text.splitlines())
-#rotulo = np.loadtxt(rotulo_response.text.splitlines())
-
-#st.pyplot(simples_plot("Base de Dados Tratada",data,rotulo))
-# my_dataframe = pd.read_csv("Funcionarios.csv") 
-# st.dataframe(my_dataframe)
-
+    st.pyplot(simples_plot("Base de Dados Tratada",data,rotulo))
+    
 
 
 entra = st.number_input("Entra numero")
@@ -53,11 +52,7 @@ st.write(data)
 with st.sidebar:
     valor = ''
 
-    if st.button("Valor"):
-        valor = 'entre'
-
-match valor:    
-    case "entre":
-        st.write("saiu")
-
-    case _: st.write("defalt")
+    if st.button("main"):
+        main()
+    if st.button("plot"):
+        plot()
