@@ -8,4 +8,8 @@ st.set_page_config(page_title="Maykoll Rocha - Portifolio Pessoal",
 
 st.write("Hello Word")
 st.text("Hello Word")
-st.latex("P(n, k) = \frac{1}{k!} \sum_{j=1}^{k} (-1)^{k-j} \binom{k}{j} j^n ")
+st.latex(r"P(n, k) = \frac{1}{k!} \sum_{j=1}^{k} (-1)^{k-j} \binom{k}{j} j^n ")
+st.markdown(r"""
+
+            $$ P(n, k) = \frac{1}{k!} \sum_{j=1}^{k} (-1)^{k-j} \binom{k}{j} j^n $$
+            """)
