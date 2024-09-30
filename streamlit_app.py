@@ -36,5 +36,9 @@ data = np.loadtxt(data_response.text.splitlines())
 rotulo = np.loadtxt(rotulo_response.text.splitlines())
 
 st.pyplot(simples_plot("Base de Dados Tratada",data,rotulo))
-my_dataframe = pd.read_csv("Funcionarios.xlsm") 
-st.dataframe(my_dataframe)
+# my_dataframe = pd.read_csv("Funcionarios.csv") 
+# st.dataframe(my_dataframe)
+
+
+entra = st.number_input("Entra numero")
+st.write(entra)
