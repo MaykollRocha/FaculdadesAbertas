@@ -52,7 +52,8 @@ def plot():
 
 
 
-if st.sidebar.button("main"):
-    main()
-if st.sidebar.button("plot"):
-    plot()
+
+
+match st.sidebar:
+    case st.button("main"):main()
+    case st.button("plot"):plot()
