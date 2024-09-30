@@ -50,8 +50,14 @@ data = st.date_input("Entre com o dia")
 st.write(data)
 
 
-match st.sidebar:
-    case st.button("Side Buton"):
-        st.write("saiu")
+with st.sidebar:
+    valor = ''
 
-    case _: st.write("defalt")
+    if st.button("Valor"):
+        valor = 'entre'
+
+    match valor:    
+        case "entre":
+            st.write("saiu")
+
+        case _: st.write("defalt")
