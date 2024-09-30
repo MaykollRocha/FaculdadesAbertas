@@ -51,5 +51,7 @@ st.write(data)
 
 
 match st.sidebar:
-    case st.button("Side Buton"):st.write("saiu")
+    case st.button("Side Buton"):
+        st.write("saiu")
+
     case _: st.write("defalt")
