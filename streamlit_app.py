@@ -45,7 +45,6 @@ entra = st.number_input("Entra numero")
 st.write(entra)
 color  = st.color_picker('Pick a color',)
 st.write(color)
-st.set_page_config(bg=color)
 
 data = st.date_input("Entre com o dia")
 st.write(data)
