@@ -10,6 +10,7 @@ st.write("Hello Word")
 st.text("Hello Word")
 st.latex(r"P(n, k) = \frac{1}{k!} \sum_{j=1}^{k} (-1)^{k-j} \binom{k}{j} j^n ")
 st.markdown(r"""
-
-            $$ P(n, k) = \frac{1}{k!} \sum_{j=1}^{k} (-1)^{k-j} \binom{k}{j} j^n $$
+            $$ P(n, k) = \frac{1}{k!} \sum_{j=1}^{k} (-1)^{k-j} \binom{k}{j} j^n $$  
+            maykoll 
+            rocha
             """)
