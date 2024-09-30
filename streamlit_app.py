@@ -49,10 +49,8 @@ data = st.date_input("Entre com o dia")
 st.write(data)
 
 
-with st.sidebar:
-    valor = ''
 
-    if st.button("main"):
-        main()
-    if st.button("plot"):
-        plot()
+if st.sidebar.button("main"):
+    main()
+if st.sidebar.button("plot"):
+    plot()
