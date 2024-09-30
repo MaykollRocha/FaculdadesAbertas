@@ -56,8 +56,8 @@ with st.sidebar:
     if st.button("Valor"):
         valor = 'entre'
 
-    match valor:    
-        case "entre":
-            st.write("saiu")
+match valor:    
+    case "entre":
+        st.write("saiu")
 
-        case _: st.write("defalt")
+    case _: st.write("defalt")
