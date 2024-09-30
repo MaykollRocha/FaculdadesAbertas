@@ -27,20 +27,17 @@ st.markdown(r"""
             rocha
             """)
 
-'''
 # Baixa os dados dos arquivos
-data_response = requests.get('https://raw.githubusercontent.com/MaykollRocha/Data_Sets/main/data.txt')
-rotulo_response = requests.get('https://raw.githubusercontent.com/MaykollRocha/Data_Sets/main/rotulos.txt')
+#data_response = requests.get('https://raw.githubusercontent.com/MaykollRocha/Data_Sets/main/data.txt')
+#rotulo_response = requests.get('https://raw.githubusercontent.com/MaykollRocha/Data_Sets/main/rotulos.txt')
 
 # Carrega os dados no NumPy
-data = np.loadtxt(data_response.text.splitlines())
-rotulo = np.loadtxt(rotulo_response.text.splitlines())
+#data = np.loadtxt(data_response.text.splitlines())
+#rotulo = np.loadtxt(rotulo_response.text.splitlines())
 
-st.pyplot(simples_plot("Base de Dados Tratada",data,rotulo))
+#st.pyplot(simples_plot("Base de Dados Tratada",data,rotulo))
 # my_dataframe = pd.read_csv("Funcionarios.csv") 
 # st.dataframe(my_dataframe)
-
-'''
 
 
 
