@@ -49,6 +49,7 @@ st.write(color)
 data = st.date_input("Entre com o dia")
 st.write(data)
 
-with st.sidebar:
-    st.button("Side Buton")
-st.write("saiu")
+
+match st.sidebar:
+    case st.button("Side Buton"):st.write("saiu")
+    case _: st.write("defalt")
