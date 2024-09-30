@@ -34,4 +34,4 @@ rotulo_response = requests.get('https://raw.githubusercontent.com/MaykollRocha/D
 data = np.loadtxt(data_response.text.splitlines())
 rotulo = np.loadtxt(rotulo_response.text.splitlines())
 
-st.pyplot(simples_plot("teste",data,rotulo))
+st.pyplot(simples_plot("Base de Dados Tratada",data,rotulo))
